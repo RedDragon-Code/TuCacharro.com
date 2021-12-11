@@ -15,6 +15,7 @@ import {
 import {Persona} from '../models';
 import {PersonaRepository} from '../repositories';
 import {AutenticacionService} from '../services';
+const fetch = require("node-fetch");
 
 export class PersonaController {
   constructor(
@@ -46,7 +47,17 @@ export class PersonaController {
     let clave = this.servicioAutenticacion.GenerarClave();
     let claveCifrada = this.servicioAutenticacion.CifradoClave(clave);
     persona.clave = claveCifrada;
+
     let p = await this.personaRepository.create(persona);
+
+    let destino = persona.correo;
+    let asunto = "Registro en Cacharro.com";
+    let contenido = `Hola, ${persona.nombres}, su nombre de usuario es: ${persona.correo}, y su contraseña es: ${clave}`;
+    fetch(`http://localhost:5000/envio-correo?correo_destino=${destino}&asunto=${asunto}& contenido=${contenido}`)
+      .then((data: any) => {
+        console.log(data);
+      });
+    return p;
   }
 
   @get('/personas/count')
