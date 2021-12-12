@@ -19,13 +19,13 @@
 
 /*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
 
-@import url(./css/animate.min.css);
-@import url(./css/normalize.css);
-@import url(./css/meanmenu.css);
-@import url(./css/owl.carousel.min.css);
-@import url(./css/slick.css);
-
-@import url(./css/nice-select.css);
+@import url(animate.min.css);
+@import url(normalize.css);
+@import url(meanmenu.css);
+@import url(owl.carousel.min.css);
+@import url(slick.css);
+@import url(jquery-ui.css);
+@import url(nice-select.css);
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
@@ -73,7 +73,6 @@ h6 {
 }
 
 h1 {
-     color:#dcdcdc;
      font-size: 24px;
      font-family: 'Righteous', cursive;
 }
@@ -108,11 +107,7 @@ h6 {
      box-sizing: border-box;
 }
 
-h1 a{
-    color: #ffffff;
-    text-decoration: none!important;
-    opacity: 1
-}
+h1 a,
 h2 a,
 h3 a,
 h4 a,
@@ -344,8 +339,7 @@ button {
 /** banner section **/
 
 .banner_main {
-     color:#dcdcdc;
-     background: url(./images/banner.jpg);
+     background: url(../images/banner.jpg);
      background-repeat: no-repeat;
      min-height: 700px;
      display: flex;
@@ -495,7 +489,7 @@ button {
 
 .bestCar {
      margin-top: 90px;
-     background: url(./images/bg.jpg);
+     background: url(../images/bg.jpg);
      background-repeat: no-repeat;
      background-size: 100% 100%;
      padding: 100px 0
@@ -912,7 +906,7 @@ button {
           padding-top: 6px;
      }
      .navigation.navbar-dark .navbar-toggler-icon {
-          background: url(./images/menu_icon.png);
+          background: url(../images/menu_icon.png);
           background-repeat: no-repeat;
      }
      .carousel-control-next-icon,
@@ -996,7 +990,7 @@ button {
           padding: 0px 19px 40px 20px;
      }
      .navigation.navbar-dark .navbar-toggler-icon {
-          background: url(./images/menu_icon.png);
+          background: url(../images/menu_icon.png);
           background-repeat: no-repeat;
      }
      .carousel-control-next-icon,
